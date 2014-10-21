@@ -190,7 +190,7 @@
     for (CCNode *bush in _bushes) {
         // move the bush
         bush.position = ccp(bush.position.x -
-                            ((character.physicsBody.velocity.x * delta)/0.75f), bush.position.y);
+                            ((character.physicsBody.velocity.x * delta)*0.75f), bush.position.y);
         
         // if the left corner is one complete width off the screen,
         // move it to the right
@@ -204,7 +204,7 @@
     for (CCNode *cloud in _clouds) {
         // move the cloud
         cloud.position = ccp(cloud.position.x -
-                             (character.physicsBody.velocity.x * delta), cloud.position.y);
+                             ((character.physicsBody.velocity.x * delta)*0.5f), cloud.position.y);
         
         // if the left corner is one complete width off the screen,
         // move it to the right
